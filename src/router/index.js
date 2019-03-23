@@ -112,6 +112,8 @@ export default new Router({
   routes: constantRouterMap
 })
 
+
+//下面的是需要权限的
 export const asyncRouterMap = [
   {
     path: '/permission',

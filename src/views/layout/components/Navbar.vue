@@ -67,7 +67,7 @@ export default {
     Screenfull,
     SizeSelect,
     LangSelect,
-    ThemePicker,
+    ThemePicker,//这个不管
     Search
   },
   computed: {

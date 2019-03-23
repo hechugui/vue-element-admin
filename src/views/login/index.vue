@@ -8,6 +8,7 @@
         <lang-select class="set-language" />
       </div>
 
+      <!--下面仅仅是说输入用户名-->
       <el-form-item prop="username">
         <span class="svg-container">
           <svg-icon icon-class="user" />
@@ -21,6 +22,7 @@
         />
       </el-form-item>
 
+      <!--下面说的是输入的密码-->
       <el-form-item prop="password">
         <span class="svg-container">
           <svg-icon icon-class="password" />
@@ -33,15 +35,18 @@
           auto-complete="on"
           @keyup.enter.native="handleLogin"
         />
+        <!--下面简单说了说显示密码-->
         <span class="show-pwd" @click="showPwd">
           <svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" />
         </span>
       </el-form-item>
 
+
       <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">
         {{ $t('login.logIn') }}
       </el-button>
 
+      <!--“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“-->
       <div style="position:relative">
         <div class="tips">
           <span>{{ $t('login.username') }} : admin</span>
@@ -109,6 +114,7 @@ export default {
     }
   },
   watch: {
+    //watch 监测
     $route: {
       handler: function(route) {
         this.redirect = route.query && route.query.redirect
@@ -216,7 +222,7 @@ export default {
 </style>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-$bg:#2d3a4b;
+$bg:#2d3b4b;
 $dark_gray:#889aa4;
 $light_gray:#eee;
 

@@ -24,6 +24,7 @@ export default {
   computed: {
     ...mapGetters([
       'permission_routers',
+
       'sidebar'
     ]),
     variables() {

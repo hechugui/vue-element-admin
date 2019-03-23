@@ -28,10 +28,12 @@ function filterAsyncRouter(routes, roles) {
         tmp.children = filterAsyncRouter(tmp.children, roles)
       }
       res.push(tmp)
+      //找到了push ,没找到就是空的
     }
   })
 
   return res
+  //res 是个数组
 }
 
 const permission = {
